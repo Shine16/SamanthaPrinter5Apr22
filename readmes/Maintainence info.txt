@@ -1,0 +1,85 @@
+
+
+
+
+Ender 3 silent main board: creality v1.1.5 (8 bit)
+Board Pinout: https://i.ebayimg.com/images/g/qlsAAOSwejNchxQT/s-l1600.jpg
+Frame parts: Prusa mk2 https://www.prusaprinters.org/prints/88236-i3-mk2-printable-parts
+Hotend: enders 3 stock hotend
+Heating resistor 12v
+bowden double geared metal
+
+step per mm 80 80 400 413
+limit switch on X Y NC (normally closed) when not triggered
+12v proximity sensor on Z, with a voltage divider to 5v for board 
+proximity sensor 5v when not triggered, 0v when triggered (led on sensor turns on)
+
+
+
+=========
+creality v1.1.3 firmware
+https://www.creality3dofficial.com/pages/firmware-download
+https://drive.google.com/drive/folders/1mYtIQV9ewZL2OH_QA2JMT3wRDXvO7yDq
+
+how to
+https://howchoo.com/ender3/ender-3-bootloader-firmware-update-marlin
+
+ENDER 3 FIRMWARE UPDATE:
+Download and install the Arduino IDE
+Add the U8glib library
+Install the Sanguino board
+Upload the sketch to your Arduino Uno
+Connect the Arduino to your Ender 3
+Burn the bootloader
+Download and prepare the latest Marlin firmware
+Connect and transfer the firmware
+Wrapping up
+
+
+=================
+
+Currently firmware is 98% of board size, may face errors in future.
+These are the things that were commented/uncommented to shrink for mesh bed leveling to fit.
+
+link 1 Tips to fit Marlin 2.0 auto leveling on atmega1284p boards (Sanguinololu, Melzi: Creality, i3, etc)
+https://www.youtube.com/watch?v=2TrGeL8ZdGU
+
+link 2 teaching tech
+https://www.youtube.com/watch?v=mAU7cIZ0Hns
+
+link 3
+https://crosslink.io/2020/08/14/shrinking-marlin-2-0-how-to-reduce-firmware-size-for-8-bit-boards-and-still-use-a-bltouch-and-the-filament-sensor/
+
+https://marlinfw.org/docs/features/lcd_menu.html
+
+config
+uncomment #define DISABLE_M503 (link 1)
+comment #define UBL_G26_MESH_VALIDATION // Enable G26 mesh validation
+comment #define SHOW_BOOTSCREEN (link 3)
+
+In configuration_adv.h:  
+comment #define arc_support (teachingtech link 2)
+uncomment #define NO_WORKSPACE_OFFSETS (link 3)
+
+=========
+
+
+Recommended items for maintainence
+
+Spare nozzle (maybe not)
+
+micro usb read/write
+Ugreen Card Reader USB 3.0/2.0 to SD Micro SD/TF Memory Card Adapter for Laptop Accessories Multi Smart Cardreader Card Reader | Shopee Singapore
+https://shopee.sg/Ugreen-Card-Reader-USB-3.0-2.0-to-SD-Micro-SD-TF-Memory-Card-Adapter-for-Laptop-Accessories-Multi-Smart-Cardreader-Card-Reader-i.102384739.4273402934
+
+7mm socket wrench for changing nozzle 
+Recommended By The Store Manager Pipe Wrench L-Shaped 7-Character Socket Multifunctional Outer Hexagonal Elbow Perforation Set 7mm | Shopee Singapore
+https://shopee.sg/com*-Bent-Socket-Wrench-L-shaped-Pipe-Type-Spanners-Auto-Maintennance-6-15mm-i.135053743.15723083497?sp_atk=ad74f44a-3e6f-46bb-be1d-a852327bd87c
+
+For cleaning dirty nozzles after print
+Wire Brush 3pcs Cleaner Copper Wire Brushes Paint Cleaning Plastic Handle Set | Shopee Singapore
+https://shopee.sg/LANFY-Cleaning-Cleaner-Tool-Copper-Brush-Handle-Printer-Parts-Printer-Accessorie-3D-Printer-For-Nozzle-Block-Hotend-Copper-Wire-Toothbrush-Cleaning-Parts-Multicolor-i.45084333.8653162593
+
+0.4mm D x 50mm L for declogging (seldom happens however useful)
+Globegroup brand flat handle acupuncture needle disposable sterile acupuncture n?????????????????? ?????100????? 3.15 | Shopee Singapore
+https://shopee.sg/Globegroup-brand-flat-handle-acupuncture-needle-disposable-sterile-acupuncture-n%E7%8E%AF%E7%90%83%E7%89%8C%E5%B9%B3%E6%9F%84%E9%92%88%E7%81%B8%E9%92%88%E4%B8%80%E6%AC%A1%E6%80%A7%E4%BD%BF%E7%94%A8%E6%97%A0%E8%8F%8C%E9%92%88%E7%81%B8%E9%92%88-%E6%AF%AB%E9%92%88%E9%92%88%E7%81%B8%E9%92%88100%E6%94%AF%E7%8B%AC%E7%AB%8B%E5%8C%85%E8%A3%85-3.15-i.451965022.17124605374

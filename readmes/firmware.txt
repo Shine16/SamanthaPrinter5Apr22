@@ -1,0 +1,96 @@
+
+
+
+To do
+design holder for extruder and bed wiring holder
+print holder
+moun holder
+design cover for electronics
+print cover
+mount cover
+find placedment for lcd
+design holder for lcd
+print lcd holder
+
+
+
+
+
+
+
+
+Done
+Repair broken parts of printer
+Fix stepper motors X
+Fix X axis
+Fix Y axis
+Fix Z axis
+Fix limit switch X
+Fix limit switch Y
+Design printer electronics holder
+mount printer electronics
+fix heated bed
+connect fitted head
+find hotend 
+find 12v heating resistor
+design part to connect hotend to X
+Find Z bed sensor
+Design Z bed sensor
+Print Z bed sensor
+Mount Z bed sensor
+Set firmware
+Upload firmware
+Test X homing
+Test Y homing
+Test Z homing
+Test Auto home
+Find Bowden extruder
+Fix Bowden to printer
+find 12v fan wiring
+find 12v fan connection to board
+extend 12v fan wiring to board
+extend wiring of sensor
+
+
+
+
+
+creality v1.1.3 firmware
+
+==========
+how to
+https://howchoo.com/ender3/ender-3-bootloader-firmware-update-marlin
+
+ENDER 3 FIRMWARE UPDATE:
+Download and install the Arduino IDE
+Add the U8glib library
+Install the Sanguino board
+Upload the sketch to your Arduino Uno
+Connect the Arduino to your Ender 3
+Burn the bootloader
+Download and prepare the latest Marlin firmware
+Connect and transfer the firmware
+Wrapping up
+========
+
+https://www.reddit.com/r/3Dprinting/comments/9evoto/possible_to_flash_an_ender_3_v113_board/e5rzxnx/
+https://www.carousell.sg/p/creality-v1-1-3-melzi-3d-printer-board-bootloader-th3d-firmware-flashed-232509883/
+
+https://howchoo.com/ender3/ender-3-bootloader-firmware-update-marlin
+https://howchoo.com/ender3/ender-3-v2-firmware-update
+
+https://www.youtube.com/watch?v=d-H91g0KRT0
+
+
+firmware
+https://www.creality.com/download
+https://www.creality3dofficial.com/pages/firmware-download
+
+someone files
+https://drive.google.com/drive/folders/1mYtIQV9ewZL2OH_QA2JMT3wRDXvO7yDq
+
+for 32 bit
+https://tutorial.cytron.io/2021/08/19/firmware-update-for-32-bit-controller-board-on-ender-3-pro-or-v2/
+
+
+

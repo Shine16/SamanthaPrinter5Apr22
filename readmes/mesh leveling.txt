@@ -1,0 +1,148 @@
+
+link 1 Tips to fit Marlin 2.0 auto leveling on atmega1284p boards (Sanguinololu, Melzi: Creality, i3, etc)
+https://www.youtube.com/watch?v=2TrGeL8ZdGU
+
+link 2 teaching tech
+https://www.youtube.com/watch?v=mAU7cIZ0Hns
+
+https://marlinfw.org/docs/features/lcd_menu.html
+
+link 3
+https://crosslink.io/2020/08/14/shrinking-marlin-2-0-how-to-reduce-firmware-size-for-8-bit-boards-and-still-use-a-bltouch-and-the-filament-sensor/
+
+config
+uncomment #define DISABLE_M503 (link 1)
+comment #define UBL_G26_MESH_VALIDATION // Enable G26 mesh validation
+comment #define SHOW_BOOTSCREEN (link 3)
+
+In configuration_adv.h:  
+comment #define arc_support (teachingtech link 2)
+uncomment #define NO_WORKSPACE_OFFSETS (link 3)
+ 
+
+
+
+
+https://3dprinting.stackexchange.com/questions/5212/remove-the-marlin-boot-screen
+
+
+
+============
+
+
+creality 1.1.5
+
+
+FIRMWARE
+https://www.thingiverse.com/groups/ender3/forums/general/topic:43346
+https://forums.creality3dofficial.com/community/ender-3-series/creality-board-1-1-5-with-bootloader-install-how-to-upload-firmware/
+https://www.creality3dofficial.com/pages/firmware-download
+HERE: https://drive.google.com/drive/folders/1mYtIQV9ewZL2OH_QA2JMT3wRDXvO7yDq
+
+
+UPLOADING to board
+UPLOAD SUCESS WITH THIS
+used Arduino 1.8.9
+in preference: https://raw.githubusercontent.com/Lauszus/Sanguino/master/package_lauszus_sanguino_index.json
+install Sanguino board
+for creality 1.1.4 green board on Ender 3
+select Sanguino 1284P 16mhz
+select port
+select AVRISP mkII as programmer
+Upload
+Uploaded Ender 3 Marlin 4.29 from original Creality Ender 3 download site
+
+
+  
+
+PINOUT DIAGRAM
+https://www.fashion3d.com.au/blogs/news/wiring-diagram-wiring-connection-for-the-mainboard
+
+
+THE BOARD
+CREALITY 3D Original Ender 3/Ender 3 PRO/Ender 3 V2 3D Printer 32 bits V4.2.7 Silent motherboard For Ender 3/Ender 3 Pro Printer|3D Printer Parts & Accessories| - AliExpress
+https://www.aliexpress.com/item/4001287288478.html
+Original CREALITY 3D Upgrade Silent 32Bits Silent Noiseless V4.2.7 Mainboard For Ender 3/3Pro/Ender 5/Ender 3 V2 Printer|3D Printer Parts & Accessories| - AliExpress
+https://www.aliexpress.com/item/1005002958887001.html
+
+CONFIG ENDSTOPS
+https://marlinfw.org/docs/hardware/endstops.html
+
+thermistor type extruder
+What type of thermistor does Ender 3 use?
+HZD 3D Printer 1.2M Thermistor Cable for 
+Ender 3 Creality CR10S Temp Sensor NTC 100K 5PCS.
+https://www.reddit.com/r/Ender3Pro/comments/izp1nx/thermistor_type_for_marlin/
+
+thermistor bed extruder
+https://www.reddit.com/r/prusa3d/comments/8egagn/heated_bed_thermistor/
+#define TEMP_SENSOR_BED 1
+
+MESH
+https://marlinfw.org/docs/gcode/G026.html
+https://www.youtube.com/watch?v=IkgfKz3t9h4
+how does it work?
+
+Using this
+https://www.youtube.com/watch?v=vcxM7-VK44k&t=7s
+
+first layer
+chainmail
+X
+
+
+in code   //#MESH
+//#MESH2
+https://marlinfw.org/docs/gcode/G029-mbl.html
+https://marlinfw.org/docs/features/auto_bed_leveling.html
+https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/
+
+
+LJ12A3-4-Z/BX NPN DC 6-36V
+https://shopee.sg/Hot-4mm-LJ12A3-4-Z-BX-Inductive-Proximity-Sensor-Detection-Switch-NPN-DC-6-36V-DIY-Accessories-i.195033390.5445851516?sp_atk=6425d723-85c1-43d4-9e68-fe908c2efa4f
+
+blue- gnd
+black- out 14.7k higher, 9.8k lower, middle voltage divider
+brown- 12v
+
+
+
+LJ12A3-4-Z/BX-5V 
+https://shopee.sg/camp-M12-4mm-DC-5V-NPN-NO-LJ12A3-4-Z-BX-5V-Inductive-Proximity-Sensor-Switch-i.483380112.16900167715?sp_atk=affe706f-a798-4455-b7d8-fef89c3788d3
+
+=====
+
+
+limit switch issue X and Y direct connect OK Z be???
+the ender thermistor NTC 100K - OK
+the prusa thermistor NTC 100K - OK
+
+To Do
+design part to hold electronics - DONE
+design part to hold extruder - DONE
+mesh leveling firmware
+design Z level switch - DONE
+find 12v fan for extruder - DONE
+design part to mount hotend  - DONE
+design fan holder at hotend - DONE
+design part to hold lcd - DONE
+
+mount bowden pusher  - DONE
+
+plan wiring for hotend and bed wires   - DONE
+fix mount for wiring hotend and bed wires   - DONE
+ 
+ 
+ 
+
+
+enable mesh bed leveling  - DONE
+shrink firmware for mesh bed leveling  - DONE
+
+
+
+
+
+
+
+
